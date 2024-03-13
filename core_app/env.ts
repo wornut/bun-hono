@@ -10,8 +10,10 @@ export type AppEnvs = Static<typeof appEnvSchema>;
 
 (() => {
 	try {
-		V.Decode(appEnvSchema, process.env);
+		const err = V.Errors(appEnvSchema, process.env).First();
+		if (err) throw err;
 	} catch (err) {
 		console.error(err);
+		process.exit(1);
 	}
 })();
