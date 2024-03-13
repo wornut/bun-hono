@@ -1,0 +1,23 @@
+{
+	"name": "@wp/core_app",
+	"module": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"lint:fix": "biome check --apply ./src",
+		"fmt": "biome format --write ./src",
+		"env:check": "bun run env.ts",
+		"serve": "bun run env:check && bun run src/server.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.1",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@hono/typebox-validator": "^0.2.2",
+		"@sinclair/typebox": "^0.32.15",
+		"hono": "^4.1.0"
+	}
+}

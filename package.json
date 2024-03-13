@@ -1,0 +1,14 @@
+{
+	"name": "bun-hono",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "1.6.1",
+		"@tsconfig/bun": "^1.0.4",
+		"@tsconfig/strictest": "^2.0.3",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"workspaces": ["core_app/*"]
+}
